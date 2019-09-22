@@ -22,8 +22,8 @@ doSomething()
 
 // 问题二
 doSomething()
-    .then(function () {
-        doSomethingElse();
+    .then(function () {     // 响应函数没有return 
+        doSomethingElse();  // 
     })
     .then(finalHandler);
 
@@ -38,7 +38,7 @@ doSomething()
 
 // 问题三
 doSomething()
-    .then(doSomethingElse())
+    .then(doSomethingElse())  // 
     .then(finalHandler);
 
 // 答案

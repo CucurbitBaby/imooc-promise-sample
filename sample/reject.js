@@ -1,4 +1,4 @@
-// Promise.reject()
+// Promise.reject() 不认 thenable
 // https://www.imooc.com/video/16626
 
 
@@ -12,11 +12,11 @@ promise
         console.log('no, it\'s not ok');
 
         return Promise.reject({
-            then() {
-                console.log('it will be ok');
-            },
-            catch() {
-                console.log('not yet');
-            }
+            // then() {         // 不认识thenable
+            //     console.log('it will be ok');
+            // },
+            // catch() {
+            //     console.log('not yet');
+            // }
         });
     });

@@ -4,7 +4,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const FileSystem = require('./FileSystem');
+const FileSystem = require('./FileSystem.js');
 
 function findLargest(dir) {
     return FileSystem.readDir(dir, 'utf-8')
@@ -34,3 +34,8 @@ function findLargest(dir) {
             return biggest.file;
         })
 }
+
+findLargest('./path/to/dir')
+.then(value=>{
+  console.log(value)
+})

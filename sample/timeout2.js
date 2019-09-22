@@ -12,9 +12,12 @@ new Promise( resolve => {
         return new Promise( resolve => {
             setTimeout( () => {
                 resolve('world');
-            }, 2000);
+            }, 1000);
         });
     })
     .then( value => {
         console.log( value + ' world');
     });
+
+// hello
+// world world

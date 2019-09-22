@@ -29,3 +29,6 @@ new Promise(resolve => {
     .catch( err => {
         console.log('No, I catch：', err);
     });
+
+
+    // 强烈建议在所有队列最后都加上一个.catch(),以避免漏掉处理造成意向不到的问题。
