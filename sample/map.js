@@ -39,3 +39,4 @@ findLargest('./path/to/dir')
 .then(value=>{
   console.log(value)
 })
+

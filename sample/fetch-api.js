@@ -12,3 +12,5 @@ fetch('some.json')
     .catch( err => {
         console.log(err);
     });
+
+    

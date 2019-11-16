@@ -24,7 +24,7 @@ Promise.all([1, 2, 3])      // 这三个值全是数字，就会直接then到下
           }, 1450);
       });
       return Promise.all([p1, p2]);   // 这就不一样了哦，但是没有reject还是下一个.then
-  })
+    })
     .then( all => {
         console.log('3：', all);
         let p1 = new Promise( resolve => {
@@ -55,7 +55,9 @@ Promise.all([1, 2, 3])      // 这三个值全是数字，就会直接then到下
 
 
     /*
-    Promise.all()
+    Promise.all([p1, p2, p3..])
+    他是批量执行一组Promise, 用于将多个Promise实例, 包装成一个新的Promise实例。 返回一个普通的Promise
+
     它接收一个数组作为参数
     数组里面可以是Promise对象，也可以是别的，只有Promise对象才会等待状态改变
 

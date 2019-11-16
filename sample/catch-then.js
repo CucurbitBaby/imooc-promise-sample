@@ -22,9 +22,15 @@ new Promise(resolve => {
     })
     .then( () => {
         console.log('arrive here');
+        // return 'test'  没有意义
+        // return new Promise( resolve => {
+        //     resolve('哈哈哈 有意义了')
+        // })
     })
-    .then( () => {
+    .then( (value) => {
         console.log('... and here');
+        // console.log('... and here'+ value);  // 没有意义
+
     })
     .catch( err => {
         console.log('No, I catch：', err);
@@ -32,3 +38,9 @@ new Promise(resolve => {
 
 
     // 强烈建议在所有队列最后都加上一个.catch(),以避免漏掉处理造成意向不到的问题。
+
+// I catch ..
+// arrive here
+// ... and here
+
+// catch返回的也是一个promise实例, 而且

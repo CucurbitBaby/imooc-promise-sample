@@ -12,16 +12,16 @@ new Promise( (resolve, reject) => {
         console.log( value + ' world');
         // 也就是说.then这里也发生错误的时候 .catch也能捕获
     }, 
-    // value => {
-    //   console.log( 'Error：', value);
-    // }
+        // value => {
+        //     console.log( 'Error：', value);
+        // }
     )
     .catch( error => {
       console.log('CatchError:',error)
     })
  
 /*
-
-推荐使用.catch
+错误处理的两种方式
+推荐使用.catch  能捕获.then中的Err
 
 */    
