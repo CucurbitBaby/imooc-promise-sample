@@ -43,4 +43,4 @@ new Promise(resolve => {
 // arrive here
 // ... and here
 
-// catch返回的也是一个promise实例, 而且
+// catch返回的也是一个promise实例, 而且其中没有抛出错误的话，它返回的Promise实例也是fulfilled状态
